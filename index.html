@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://getbootstrap.com/examples/offcanvas/# -->
-<html lang="en" ng-app>
+<html lang="en" ng-app="uiRouterSample">
 
   <script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
 
@@ -20,9 +20,18 @@
   <!-- Placed at the end of the document so the pages load faster -->
   <script src="js/jquery-1.10.2.min.js"></script>
   <script src="js/bootstrap.min.js"></script>
+  
 
   <script src="http://code.angularjs.org/1.2.3/angular.min.js"></script>
   <script src="http://code.angularjs.org/1.2.3/angular-animate.min.js"></script>
+  <script src="js/angular-ui-router.min.js"></script>
+      <!-- module.js declares the uiRouterSample module and adds items to $rootScope-->
+    <script src="js/module.js"></script>
+    <!-- factory.js defines a 'contacts' http service and a 'utils' global functions service -->
+    <script src="js/factory.js"></script>
+    <!-- state.js takes care of all the state configuration, where all the magic's at-->
+    <script src="js/states.js"></script>
+  
 
   <!-- Bootstrap core CSS -->
   <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -41,16 +50,14 @@
   <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
   <![endif]-->
   <style type="text/css"></style>
-  <script src="js/bastiao.core.js"></script>
+  
+
 
 </head>
 
 <body style="">
 
-  <div ng-controller="Ctrl">
-    
-    
-    
+  
 
     <div class="navbar navbar-fixed-top navbar-inverse" role="navigation">
       <div class="container">
@@ -66,127 +73,23 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav" >
             
+          <li ng-class="{ active: $state.includes('contacts') }"><a ui-sref="contacts.list">Contacts</a></li>
+          
+          <li ng-class="{ active: $state.includes('publications') }"><a ui-sref="publications">Publications</a></li>
+          
 
-            <li ng-model="template"  ng-repeat="t in templates">
-               <a  href="templates/{{t.url}}" ng-click="return false;">{{t.name}}</a>
-          </li>
+          <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about">About</a></li>
           
           </ul>
+          <p ui-view="hint" class="navbar-text pull-right"></p>
         </div>
         <!-- /.nav-collapse --> </div>
       <!-- /.container --> </div>
     <!-- /.navbar -->
 
-    <div class="container">
 
-      <div class="row row-offcanvas row-offcanvas-right">
+    <div ui-view class="container" style="margin-top:60px" ng-animate="{enter:'fade-enter'}"></div>
 
-        <div class="col-xs-12 col-sm-9">
-          <p class="pull-right visible-xs">
-            <button type="button" class="btn btn-primary btn-xs" data-toggle="offcanvas">Toggle nav</button>
-          </p>
-          <div class="jumbotron">
-
-          <div class="slide-animate-container">
-      <div class="slide-animate" ng-include="template.url"></div>
-      </div>
-            <h1>Luís Bastião</h1>
-            <div ng-include="templates/{{template.url}}"></div>
-
-          </p>
-        </div>
-        <div class="slide-animate-container">
-        <div class="slide-animate" ng-include="template.url"></div>
-      </div>
-        <div class="row">
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span-->
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span-->
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span-->
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span-->
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span-->
-          <div class="col-6 col-sm-6 col-lg-4">
-            <h2>Heading</h2>
-            <p>
-              Donec id elit non mi porta gravida at eget metus. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Etiam porta sem malesuada magna mollis euismod. Donec sed odio dui.
-            </p>
-            <p>
-              <a class="btn btn-default" href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" role="button">View details »</a>
-            </p>
-          </div>
-          <!--/span--> </div>
-        <!--/row--> </div>
-      <!--/span-->
-
-      <div class="col-xs-6 col-sm-3 sidebar-offcanvas" id="sidebar" role="navigation">
-        <div class="list-group">
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item active">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-          <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" class="list-group-item">Link</a>
-        </div>
-      </div>
-      <!--/span--> </div>
-    <!--/row-->
-
-    <hr>
-
-    <footer>
-      <p>© Luís Bastião 2013</p>
-    </footer>
-
-  </div>
-  <!--/.container-->
 
   <div id="window-resizer-tooltip">
     <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a>
@@ -201,7 +104,14 @@
     <span class="tooltipHeight" id="vpHeight"></span>
   </div>
 
-</div>
 
+<pre>
+      <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
+      $state = {{$state.current.name}}
+      $stateParams = {{$stateParams}}
+      $state full url = {{ $state.$current.url.source }}
+      <!-- $state.$current is not a public api, we are using it to
+           display the full url for learning purposes-->
+    </pre>
 </body>
 </html>
