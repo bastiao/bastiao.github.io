@@ -10,7 +10,10 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="">
-  <meta name="author" content="">
+  <meta name="description" content="David Campos portfolio presenting developed tools, associated projects and publications. David Campos is a Portuguese researcher and software developer.">
+  <meta name="keywords" content="bastiao, luis bastiao, portfolio, dicom, pacs, network, cloud computing, biomedical text mining, information retrieval, information extraction, bioinformatics, research">
+  <meta name="author" content="Luis Bastião">
+
   <link rel="shortcut icon" href="http://getbootstrap.com/docs-assets/ico/favicon.png">
 
   <title>Luís Bastiao</title>
@@ -27,8 +30,7 @@
   <script src="js/angular-ui-router.min.js"></script>
       <!-- module.js declares the uiRouterSample module and adds items to $rootScope-->
     <script src="js/module.js"></script>
-    <!-- factory.js defines a 'contacts' http service and a 'utils' global functions service -->
-    <script src="js/factory.js"></script>
+    
     <!-- state.js takes care of all the state configuration, where all the magic's at-->
     <script src="js/states.js"></script>
   
@@ -38,6 +40,8 @@
 
   <!-- Custom styles for this template -->
   <link href="css/offcanvas.css" rel="stylesheet">
+  <link href="css/font-awesome.min.css" rel="stylesheet">
+  
 
   <!-- Just for debugging purposes. Don't actually copy this line! -->
   <!--[if lt IE 9]>
@@ -73,45 +77,40 @@
         <div class="collapse navbar-collapse">
           <ul class="nav navbar-nav" >
             
-          <li ng-class="{ active: $state.includes('contacts') }"><a ui-sref="contacts.list">Contacts</a></li>
+          
+          <li ng-class="{ active: $state.includes('home') }"><a ui-sref="home">Home</a></li>
+          
+          <li ng-class="{ active: $state.includes('projects') }"><a ui-sref="projects">Projects</a></li>
           
           <li ng-class="{ active: $state.includes('publications') }"><a ui-sref="publications">Publications</a></li>
           
+          <li ng-class="{ active: $state.includes('blog') }"><a ui-sref="blog">Blog</a></li>
+          
+          <li ng-class="{ active: $state.includes('contact') }"><a ui-sref="contact">Contacts</a></li>
 
           <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about">About</a></li>
           
           </ul>
-          <p ui-view="hint" class="navbar-text pull-right"></p>
+          
         </div>
         <!-- /.nav-collapse --> </div>
       <!-- /.container --> </div>
     <!-- /.navbar -->
 
 
-    <div ui-view class="container" style="margin-top:60px" ng-animate="{enter:'fade-enter'}"></div>
+    <div ui-view class="container" style="margin-top:10px" ng-animate="{enter:'fade-enter'}">
+      
+    </div>
 
 
-  <div id="window-resizer-tooltip">
-    <a href="./Off Canvas Template for Bootstrap_files/Off Canvas Template for Bootstrap.html" title="Edit settings" style="background-image: url(chrome-extension://kkelicaakdanhinjdeammmilcgefonfh/images/icon_19.png);"></a>
-    <span class="tooltipTitle">Window size:</span>
-    <span class="tooltipWidth" id="winWidth"></span>
-    x
-    <span class="tooltipHeight" id="winHeight"></span>
-    <br>
-    <span class="tooltipTitle">Viewport size:</span>
-    <span class="tooltipWidth" id="vpWidth"></span>
-    x
-    <span class="tooltipHeight" id="vpHeight"></span>
-  </div>
+   <footer class="background-gray-darker text-center">
+        <div class="container">
+            &copy; Luís Bastião <span id="year"></span>
+        </div>
+    </footer>
+
+  
 
 
-<pre>
-      <!-- Here's some values to keep an eye on in the sample in order to understand $state and $stateParams -->
-      $state = {{$state.current.name}}
-      $stateParams = {{$stateParams}}
-      $state full url = {{ $state.$current.url.source }}
-      <!-- $state.$current is not a public api, we are using it to
-           display the full url for learning purposes-->
-    </pre>
 </body>
 </html>
