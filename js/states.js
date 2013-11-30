@@ -34,7 +34,7 @@ angular.module('uiRouterSample')
           .state('home', {
 
             // This abstract state will prepend '/contacts' onto the urls of all its children.
-            url: '/home',
+            url: '/',
 
             // Example of loading a template from a file. This is also a top level state,
             // so this template file will be loaded and then inserted into the ui-view

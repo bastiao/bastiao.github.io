@@ -9,8 +9,7 @@
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta name="description" content="">
-  <meta name="description" content="David Campos portfolio presenting developed tools, associated projects and publications. David Campos is a Portuguese researcher and software developer.">
+  <meta name="description" content="Luis Bastiao is a portuguese researcher and software developer.">
   <meta name="keywords" content="bastiao, luis bastiao, portfolio, dicom, pacs, network, cloud computing, biomedical text mining, information retrieval, information extraction, bioinformatics, research">
   <meta name="author" content="Luis Bastião">
 
@@ -41,6 +40,7 @@
   <!-- Custom styles for this template -->
   <link href="css/offcanvas.css" rel="stylesheet">
   <link href="css/font-awesome.min.css" rel="stylesheet">
+  <link href="css/bastiao.css" rel="stylesheet">
   
 
   <!-- Just for debugging purposes. Don't actually copy this line! -->
@@ -84,10 +84,8 @@
           
           <li ng-class="{ active: $state.includes('publications') }"><a ui-sref="publications">Publications</a></li>
           
-          <li ng-class="{ active: $state.includes('blog') }"><a ui-sref="blog">Blog</a></li>
+          <li ><a target="_new" href="http://luisbastiao.wordpress.com">Blog</a></li>
           
-          <li ng-class="{ active: $state.includes('contact') }"><a ui-sref="contact">Contacts</a></li>
-
           <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about">About</a></li>
           
           </ul>
@@ -103,12 +101,35 @@
     </div>
 
 
-   <footer class="background-gray-darker text-center">
-        <div class="container">
-            &copy; Luís Bastião <span id="year"></span>
-        </div>
-    </footer>
+   <footer class="background-gray-darker text-center" style="background-color:#000000;color:#FFFFFF;">
 
+     <div class="contact row text-center">
+       <a class="contact-big" href=""  style="cursor:default;color:#FFFFFF;">
+         <div></div>
+         <div> <i class="fa fa-envelope"></i>
+           luis.kop@gmail.com
+         </div>
+       </a>
+       <a class="contact-big" style="cursor:default;color:#FFFFFF;">
+         <div>
+           <div> <i class="fa fa-phone"></i>
+             +351 916 427 877
+           </div>
+         </div>
+
+       </a>
+       <a class="contact-big" style="cursor:default;color:#FFFFFF;">
+         <div></div>
+         <div>
+           <i class="fa fa-skype"></i>
+           koplabs
+         </div>
+       </a>
+     </div>
+     &copy; Luís Bastião
+     <span id="year"></span>
+
+   </footer>
   
 
 
