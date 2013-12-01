@@ -1,16 +1,54 @@
 
 
+<!--
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/gsoc.png"/>
+	</div>
+
+	<div class="col-lg-9"></div>
+</div>
+-->
+
+
 
 <h3>Current projects</h3>
+
+
+<h4>EMIF Platform </h4>
+
+
+
+<h4>Monitoring DICOM devices</h4>
+
+
+<h4>Federating medical imaging repositories</h4>
+
+
+
+
 <h4>PACS Cloud (Medical Archive  over the Cloud Computing)</h4>
 
-</b>
 
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/pacscloud.png"/>
+	</div>
+
+	<div class="col-lg-9">
+		
+		<p>
+
+ Healthcare institutions resort largely, nowadays, to telemedicine in order to support collaborative environments. In the medical imaging area, the huge amount of medical volume data has increased over the past few years, requiring high-performance infrastructures to provide services with required quality. Computing devices and Internet access are now available anywhere and at anytime, creating new opportunities to share and use online resources. A tremendous amount of ubiquitous computational power and an unprecedented number of Internet resources and services are used every day as a normal commodity. This thesis presents a telemedicine service platform over the Cloud that allows applications to store information and to communicate easier, using any Internet cloud provider. With this platform, developers do not concern where the resources will be deployed and the applications will not be restricted to a specific cloud vendor. Two tele-imagiologic applications were developed along with this platform: a medical imaging repository and an inter-institutional communications infrastructure. Lastly, the architecture developed is generic and flexible to expand to other application areas and cloud services.
+</p>
 URL: <a href="http://www.dicoogle.com/?p=288">More information</a>
 <br />
 <br />
-Info: PACS archive that provides high security and that is independent from the cloud provider. PACS Cloud is my master thesis project, still under developement.
 
+	</div>
+</div>
+
+</b>
 
 <h4>Dicoogle (an Open Source platform to share medical image)</h4>
 
@@ -41,13 +79,27 @@ Info: PACS archive that provides high security and that is independent from the 
 <h4>Open Monitor
 </h4>
 
-URL: <a href="http://www.openmonitor.org/">www.openmonitor.org</a>
-<br />
-<br />
-Info:
+
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/open_monitor_200.png"/>
+	</div>
+
+	<div class="col-lg-9">
+		
+	
 
 
 Open Monitor is a project developed by Umit Project, and was started during Google Summer of Code 2011. Its goal is to provide real time data about internet censorship and restrictions world wide. This is a free service that runs on top of our free and open source software, and we’re working hard on it in the hope that it will be useful for people facing these issues anywhere in the world.
+
+
+URL: <a href="http://www.openmonitor.org/">www.openmonitor.org</a>
+<br />
+<br />
+
+	</div>
+</div>
+
 
 
 <h4>
@@ -55,8 +107,22 @@ Umit Project
 
 </h4>
 
+
+<div class="row ">
+	<div class="col-lg-3"style="text-align:left;">
+		<img src="img/logos/umit.png"/>
+		
+	</div>
+
+	<div class="col-lg-9">
+		
+
 Umit Project is an open source international software organization in Computer Networking. The project was born in 2005 in Nmap's Organization and it became an independent organization in 2007. The aims of Umit Project is to make life easier for network administrators and for other users that want to be aware of what is happening in their networks.<br/>
 Umit Project currently have two main concerns in Networking: Network Scanning and Packets Manipulation/Sniffing. Umit's Network Scanner is a graphical interface that offers network mapping capabilities, discovering of hosts, services and track changes in the network. It is also valid for Bluetooth Network Devices.<br />
+<p style="text-align:center;">
+<img src="img/logos/HostDiscovery.png"/>
+		<img src="img/logos/scan3.png"/>
+</p>
 At the other hand, the Packet Manipulation/Sniffing have other goals: create protocols, packets, send packets, sniffing, protocol testing, help on network software development tests, and other very cool features available throught a backend library and a nice frontend.
 Umit Project has being supported by Google Summer of Code since 2005, and never failed a participation until this year. Umit Network Scanner has even appeared in The Bourne Ultimate movie, helping the CIA to crack into a journalist's account to find out where was he going to.
 <br />
@@ -72,10 +138,59 @@ Umit Project has being supported by Google Summer of Code since 2005, and never 
 <a target="_blank" href="http://trac.umitproject.com/">Trac Umit Project</a>
 <br />
 <br />
+
+	</div>
+</div>
+
+
+
+<h3>Open Source - Software libraries</h3>
+
+
+<h4>JDBQueue - Java Persistence Queue</h4>
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/jdbqueue.png"/>
+	</div>
+
+	<div class="col-lg-9">
+		The basic idea of JDBQueue is to have a persistence Queue. Then, if the program need to restart, the queue is restored. We use a database because serialize a Queue objet is not faster, for each insertion.
+
+This messages in the queue has 2 states:
+<ul>
+<li>PENDING: It waits for a worker poll the message.</li>
+<li>PROGRESS: A worker is trying to work on the message.</li>
+</ul>
+There is a third-party state, that it is when the message are handled and it is completed. The work do completeTask and the message are removed from the DBQueue (persistence queue).
+
+	</div>
+</div>
+
+
+<h4>Tablediff.js -  Differencial comparison for HTML tables </h4>
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/tablediff.png"/>
+	</div>
+
+	<div class="col-lg-9">
+		A javascript implementation to compare several sets of values. The idea of this small script will be create a table that allows to distinct in a visual way the values that are differente from the others in table.
+
+	</div>
+</div>
+
 <h3>
 Google Summer of Code
 </h3>
 
+
+<div class="row ">
+	<div class="col-lg-3">
+		<img src="img/logos/gsoc.png"/>
+	</div>
+
+	<div class="col-lg-9">
+		
 Google Summer of Code is a global program that offers student developers stipends to write code for various open source software projects. I worked in GSoC since 2007 mainly with Nmap and Umit projects. In this section I present the tasks I performed every year.</br>
 <br/>
 <ul>
@@ -86,6 +201,9 @@ Google Summer of Code is a global program that offers student developers stipend
 <li>2007: In the GSoC 2007 Interface Editor was accepted by Umit Project.
 
 </ul>
+
+	</div>
+</div>
 
 <h3>
 Blogs
@@ -100,40 +218,6 @@ Blogs
 <br />
 <a target="_blank" href="http://macosuser.blogspot.com/"> it's not about the mac it's about unix - a blog </a>
 
-
-<h3>
-Academic Projects
-</h3>
-
-<h4>
-Dicoogle PACS: Query/Retrieve process 
-</h4>
-
-Dicoogle project starts growing up.
-<br />
-<b>URL: </b> <a href="http://www.dicoogle.com/">http://www.dicoogle.com/</a>
-
-
-<h4>
-ParkMe
-</h4>
-
-ParkMe: the project's goal is to park the car.
-
-The idea is having all parks mapped and saved in the main system. Then the user will be able to find the closest spot to park the car.
-
-<br />
-<b>URL: </b> <a href="http://code.google.com/p/parkme/">http://code.google.com/p/parkme</a>
-
-<h4>
-Smart Ad
-</h4>
-
-
-SmartAd is a new service built using SOA methodology and 3GPP/IMS framework. The services developed for this framework are independent and horizontal. An evolution compared to previous platform.
-Through the composition of services is possible to build an innovative service and fully integrated with the network of telecommunications operators.
-<br />
-<b>URL: </b> <a href="http://code.google.com/p/smartad/">http://code.google.com/p/smartad/</a>
 
 <h3>
 Old Projects
@@ -189,6 +273,43 @@ Nim'taur is a free game. I mean really free, you have access to all the features
 <b>URL:</b> <a target="_blank" href="http://www.nimtaur.com/">Nimtaur - a online game: main core developer</a>
 <br />
 <br />
-Other contributions? Ask google. :)
+
+
+
+<h3>
+Academic Projects
+</h3>
+
+<h4>
+Dicoogle PACS: Query/Retrieve process 
+</h4>
+
+Dicoogle project starts growing up.
+<br />
+<b>URL: </b> <a href="http://www.dicoogle.com/">http://www.dicoogle.com/</a>
+
+
+<h4>
+ParkMe
+</h4>
+
+ParkMe: the project's goal is to park the car.
+
+The idea is having all parks mapped and saved in the main system. Then the user will be able to find the closest spot to park the car.
+
+<br />
+<b>URL: </b> <a href="http://code.google.com/p/parkme/">http://code.google.com/p/parkme</a>
+
+<h4>
+Smart Ad
+</h4>
+
+
+SmartAd is a new service built using SOA methodology and 3GPP/IMS framework. The services developed for this framework are independent and horizontal. An evolution compared to previous platform.
+Through the composition of services is possible to build an innovative service and fully integrated with the network of telecommunications operators.
+<br />
+<b>URL: </b> <a href="http://code.google.com/p/smartad/">http://code.google.com/p/smartad/</a>
+
+<h3>Other contributions? Ask google. :)</h3>
 	
 </div>
