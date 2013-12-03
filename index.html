@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- saved from url=(0044)http://getbootstrap.com/examples/offcanvas/# -->
-<html lang="en" ng-app="uiRouterSample">
+<html lang="en" ng-app="uiRouterSample" style="height:100%">
 
   <script id="tinyhippos-injected">if (window.top.ripple) { window.top.ripple("bootstrap").inject(window, document); }</script>
 
@@ -58,9 +58,10 @@ a:hover {
   cursor:pointer;
  }
  i:hover{ cursor: pointer; 
-  decoration: none;}
+  text-decoration: none;}
 
   </style>
+
   
 
 </head>
@@ -84,9 +85,9 @@ a:hover {
           <ul class="nav navbar-nav" >
             
           
-          <li ng-class="{ active: $state.includes('home') }"><a ui-sref="home"><i class="fa fa-home fa-1x"></i> Home</a></li>
+          <li ng-class="{ active: $state.includes('home') }"><a ui-sref="home" ><i class="fa fa-home fa-1x"></i> Home</a></li>
           
-          <li ng-class="{ active: $state.includes('projects') }"><a ui-sref="projects"><i class="fa fa-tag fa-1x"></i> Projects</a></li>
+          <li ng-class="{ active: $state.includes('projects') }"><a ui-sref="projects" ><i class="fa fa-tag fa-1x"></i> Projects</a></li>
           
           <li ng-class="{ active: $state.includes('publications') }"><a ui-sref="publications"><i class="fa fa-pencil fa-1x"></i> Publications</a></li>
           
@@ -102,7 +103,7 @@ a:hover {
     <!-- /.navbar -->
 
 
-    <div ui-view class="container" style="margin-top:10px" ng-animate="{enter:'fade-enter'}">
+    <div ui-view class="container" style="margin-top:10px;"  ng-animate="{enter:'fade-enter'}">
       
     </div>
 
