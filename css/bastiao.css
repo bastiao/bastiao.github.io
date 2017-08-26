@@ -2,3 +2,12 @@
 .background-gray-darker {
 	background-color: #1a1919;
 }
+
+.footer-s {
+	position:fixed;
+	left:0px;
+	bottom:0px;
+	height:30px;
+	width:100%;
+	background:#999;
+ }

@@ -90,9 +90,9 @@ a:hover {
           <li ng-class="{ active: $state.includes('projects') }"><a ui-sref="projects" ><i class="fa fa-tag fa-1x"></i> Projects</a></li>
 
           <li ng-class="{ active: $state.includes('publications') }"><a ui-sref="publications"><i class="fa fa-pencil fa-1x"></i> Publications</a></li>
-
+<!--
           <li ><a target="_new" href="http://luisbastiao.wordpress.com"><i class="fa fa-refresh fa-1x"></i> Blog</a></li>
-
+-->
           <li ng-class="{ active: $state.includes('about') }"><a ui-sref="about"><i class="fa fa-users fa-1x"></i> About</a></li>
 
           </ul>
@@ -103,21 +103,18 @@ a:hover {
     <!-- /.navbar -->
 
 
-    <div ui-view class="container" style="margin-top:10px;"  ng-animate="{enter:'fade-enter'}">
+    <div ui-view class="container" style="margin-top:10px"  ng-animate="{enter:'fade-enter'}">
 
     </div>
 
 
-   <footer class="background-gray-darker text-center" style="background-color:#000000;color:#FFFFFF;height:190px;">
+   <footer class="background-gray-darker footer-s text-center" style="background-color:#000000;color:#FFFFFF;height:100px;">
+      © Luís Bastião Silva <span id="year">2017</span>
+      <!--
 
      <div class="row">
        <div class="col-md-4">
-
-
-
-      &copy; Luís Bastião
-      <span id="year"></span>
-
+              © Luís Bastião Silva <span id="year">2017</span>
 
        </div>
        <div class="col-md-4">
@@ -144,7 +141,7 @@ a:hover {
                   koplabs
                 </div>
               </a>
-</div>
+        </div>
        </div>
        <div class="col-md-4">
 
@@ -161,7 +158,7 @@ a:hover {
 
        </div>
      </div>
-
+    -->
 
    </footer>
 
