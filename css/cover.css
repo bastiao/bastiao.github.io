@@ -63,12 +63,14 @@ h2{
 .masthead {
   margin-bottom: 2rem;
   background-color: #333;
+  opacity: 1;
   color: white;
   overflow: hidden;
   background-color: #333;
   position: fixed; /* Set the navbar to fixed position */
   top: 0; /* Position the navbar at the top of the page */
   width: 100%; /* Full width */
+
   
 }
 
@@ -76,7 +78,9 @@ h2{
   margin-bottom: 0;
   
 }
-
+.nav-masthead {
+  margin-right: 100px;
+}
 .nav-masthead .nav-link {
   padding: .25rem 0;
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
