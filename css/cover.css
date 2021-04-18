@@ -9,6 +9,9 @@ a:hover {
   color: #fff;
 }
 
+
+
+
 /* Custom default button */
 .btn-secondary,
 .btn-secondary:hover,
@@ -139,7 +142,7 @@ h2{
  * Footer
  */
 .mastfoot {
-  color: rgba(255, 255, 255, .5);
+  color: rgba(255, 255, 255, .8);
   text-align: center;
 }
 
@@ -270,7 +273,7 @@ i {
 
 #projects a {
   background-color:white;
-  color:blue;
+  color:rgb(104, 195, 255);
 
 }
 
@@ -283,7 +286,7 @@ i {
 
 #publications a {
   background-color:white;
-  color:blue;
+  color:rgb(104, 195, 255);
 
 }
 
@@ -312,7 +315,7 @@ i {
 
 #about a {
   background-color:white;
-  color:blue;
+  color:rgb(104, 195, 255);
 
 }
 
@@ -347,4 +350,15 @@ i {
 }
 .embed-responsive .card-img-top {
   object-fit: cover;
+}
+
+.projects .card img {
+
+  height: 100px;
+}
+
+.logo-projects {
+  text-align: center;
+  margin-top: 10px;
+ 
 }

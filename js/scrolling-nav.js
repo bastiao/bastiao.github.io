@@ -27,7 +27,7 @@
   });
 
   var typed = new Typed('.typehashtags', {
-    strings: ['archicture', 'software', 'cloud native', 'dicom', 'pacs', 'leadership'],
+    strings: ['archicture', 'software', 'cloud native', 'DICOM', 'PACS', 'docker', 'kubernetes', 'scalability', 'management', 'leadership', 'programming' ],
     smartBackspace: true, // Default value,
     loop: true,
     backSpeed: 70,
