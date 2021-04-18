@@ -340,7 +340,7 @@ i {
 
 /************* Phones X, tablets *************/
 
-@media screen and (max-width: 1000) {
+@media screen and (max-width: 1000px) {
     .photo-me {
         border-radius: 50%;
         width: 40%;
@@ -363,7 +363,7 @@ i {
 
 @media screen and (min-width: 550px) and (max-width: 800px) {
     .masthead {
-        width: 500px;
+        width: 800px;
     }
     #about h1 {
         margin-top: 100px;
@@ -487,10 +487,10 @@ i {
     }
 }
 
-@media screen and (min-width: 1000px) and (max-width: 1024px) {
+@media screen and (min-width: 1000px) and (max-width: 1365px) {
     .photo-me {
         border-radius: 50%;
         width: 30%;
-        margin-left: 300px;
+        margin-left: 370px;
     }
 }
