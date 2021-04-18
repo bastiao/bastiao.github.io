@@ -292,6 +292,11 @@ i {
     color: rgb(104, 195, 255);
 }
 
+#publications i {
+    display: block;
+    color: #333;
+}
+
 #publications p {
     padding-bottom: 5px;
     display: list-item;
