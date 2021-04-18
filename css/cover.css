@@ -367,6 +367,9 @@ i {
 /************* Mobile, phones *************/
 
 @media screen and (min-width: 550px) and (max-width: 800px) {
+    .typehashtags {
+        font-size: medium;
+    }
     .masthead {
         width: 800px;
     }
@@ -405,6 +408,9 @@ i {
 @media screen and (max-width: 350px) {
     .masthead {
         width: 500px;
+    }
+    .typehashtags {
+        font-size: medium;
     }
     #about h1 {
         margin-top: 100px;
@@ -448,6 +454,9 @@ i {
 @media screen and (min-width: 351px) and (max-width: 375px) {
     .masthead {
         width: 500px;
+    }
+    .typehashtags {
+        font-size: medium;
     }
     #about h1 {
         margin-top: 100px;
@@ -498,6 +507,9 @@ i {
         width: 40%;
         margin-left: 20px;
     }
+    .hashtags {
+        font-size: small;
+    }
 }
 
 @media screen and (min-width: 1281px) and (max-width: 1365px) {
@@ -505,6 +517,9 @@ i {
         border-radius: 50%;
         width: 30%;
         margin-left: 370;
+    }
+    .hashtags {
+        font-size: small;
     }
 }
 
