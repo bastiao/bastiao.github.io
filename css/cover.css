@@ -133,6 +133,10 @@ h2 {
     /* For 100% screen height */
 }
 
+.hashtags {
+    font-size: xx-large;
+}
+
 
 /*
  * Footer
@@ -367,9 +371,6 @@ i {
 /************* Mobile, phones *************/
 
 @media screen and (min-width: 550px) and (max-width: 800px) {
-    .typehashtags {
-        font-size: medium;
-    }
     .masthead {
         width: 800px;
     }
@@ -508,7 +509,7 @@ i {
         margin-left: 20px;
     }
     .hashtags {
-        font-size: small;
+        font-size: medium;
     }
 }
 
@@ -519,7 +520,7 @@ i {
         margin-left: 370;
     }
     .hashtags {
-        font-size: small;
+        font-size: medium;
     }
 }
 
